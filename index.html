@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="modal hidden" id="addModal">
+        <form action="" class="addForm">
+            <div class="close-btn">
+                <span class="close">&times;</span>
+            </div>
+            <div class="form-title">
+                Add Todo
+
+            </div>
+            <div class="input">
+                <input type="text" name="category" id="input-category">
+            </div>
+            <div class="input">
+                <input type="text" name="title" id="input-title">
+            </div>
+            <div class="input">
+                <textarea name="content" id="input-content" cols="59" rows="6"></textarea>
+            </div>
+            <div class="submit-btn">
+                <button class="submit">Submit</button>
+            </div>
+
+
+
+        </form>
+    </div>
+    <div class="modal hidden " id="editModal">
+
+        <form action="" class="editForm">
+            <div class="close-btn">
+                <span class="close">&times;</span>
+            </div>
+            <div class="form-title">
+                Edit Todo
+
+            </div>
+            <div class="input ">
+                <input type="text" name="category" id="edit-category">
+            </div>
+            <div class="input ">
+                <input type="text" name="title" id="edit-title">
+            </div>
+            <div class="input">
+                <textarea name="content" id="edit-content" cols="59" rows="6"></textarea>
+            </div>
+            <div class="radio">
+                <div class="radio-btn">
+                    <input type="radio" id="todo" name="type" value="todo">
+                    <label for="todo">Todo</label><br>
+                </div>
+                <div class="radio-btn">
+                    <input type="radio" id="doing" name="type" value="doing">
+                    <label for="doing">Doing</label><br>
+                </div>
+                <div class="radio-btn">
+                    <input type="radio" id="finished" name="type" value="finished">
+                    <label for="finished">Finished</label>
+                </div>
+
+
+
+            </div>
+            <div class="submit-btn">
+                <button class="submit">Submit</button>
+            </div>
+
+
+
+        </form>
+    </div>
+    <div class="content">
+
+        <div class="header">
+            <div class="header-logo">
+                <div class="logo">
+
+                </div>
+                <div class="slogan">
+                    <div class="slogan-text">Let's get shit done!</div>
+                    <div class="peace-sign">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="new-task" onclick="showAddModal()">
+                    + New task
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="column  todo">
+                <div class="column-header">
+                    <div class="column-title">
+                        Todo
+                    </div>
+                    <div class="column-count">
+                        0
+                    </div>
+                </div>
+                <div class="column-content">
+
+                </div>
+            </div>
+            <div class="column doing">
+                <div class="column-header">
+                    <div class="column-title">
+                        Doing
+                    </div>
+                    <div class="column-count">
+                        0
+                    </div>
+                </div>
+                <div class="column-content">
+
+
+                </div>
+            </div>
+            <div class="column finished">
+                <div class="column-header">
+                    <div class="column-title">
+                        Finished
+                    </div>
+                    <div class="column-count">
+                        0
+                    </div>
+                </div>
+                <div class="column-content">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="./assets/js/main.js"></script>
+
+</html>
